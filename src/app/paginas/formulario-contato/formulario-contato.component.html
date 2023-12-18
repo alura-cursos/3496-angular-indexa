@@ -8,24 +8,27 @@
       <h1>Adicionar contato</h1>
     </section>
   </header>
-  <form>
+  <form [formGroup]="contatoForm">
     <label for="nome">Nome</label>
     <input
       type="text"
       id="nome"
       placeholder="Digite o nome do contato"
+      formControlName="nome"
     />
     <label for="telefone">Telefone</label>
     <input
       type="text"
       id="telefone"
       placeholder="Digite o telefone do contato"
+      formControlName="telefone"
     />
     <label for="email">E-mail</label>
     <input
       type="email"
       id="email"
       placeholder="Digite o e-mail do contato"
+      formControlName="email"
     />
     <app-separador></app-separador>
     <label for="aniversario">Aniversário</label>
@@ -33,6 +36,7 @@
       type="date"
       id="aniversario"
       placeholder="Data de nascimento"
+      formControlName="aniversario"
     />
     <label for="redes">Redes sociais</label>
     <div class="input-container">
@@ -41,6 +45,7 @@
         type="url"
         id="redes"
         placeholder="Adicione a URL da página"
+        formControlName="redes"
       />
     </div>
     <label for="redes">Observações</label>
@@ -48,6 +53,7 @@
       type="text"
       id="observacoes"
       placeholder="Coloque observações nesse espaço.  Exemplo: “Instrutora da academia “Nova Imagem”, amiga da Júlia”."
+      formControlName="observacoes"
     ></textarea>
     <section class="botoes">
       <button class="botao-cancelar" type="button">Cancelar</button>
