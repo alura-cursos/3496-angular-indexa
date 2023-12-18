@@ -17,6 +17,11 @@
       placeholder="Digite o nome do contato"
       formControlName="nome"
     />
+    @if (contatoForm.get('nome')?.errors && contatoForm.get('nome')?.touched) {
+      <div class="mensagem-erro">
+        Campo obrigatório
+      </div>
+    }
     <label for="telefone">Telefone</label>
     <input
       type="text"
@@ -24,6 +29,11 @@
       placeholder="Digite o telefone do contato"
       formControlName="telefone"
     />
+    @if (contatoForm.get('telefone')?.errors && contatoForm.get('telefone')?.touched) {
+      <div class="mensagem-erro">
+        Campo obrigatório
+      </div>
+    }
     <label for="email">E-mail</label>
     <input
       type="email"
@@ -31,6 +41,11 @@
       placeholder="Digite o e-mail do contato"
       formControlName="email"
     />
+    @if (contatoForm.get('email')?.errors && contatoForm.get('email')?.touched) {
+      <div class="mensagem-erro">
+        Campo obrigatório
+      </div>
+    }
     <app-separador></app-separador>
     <label for="aniversario">Aniversário</label>
     <input
