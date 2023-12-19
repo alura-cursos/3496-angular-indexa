@@ -7,6 +7,13 @@
     [(ngModel)]="filtroPorTexto"
   />
 
+  <section class="adicionar-contato">
+    <button routerLink="/formulario">
+      <img src="assets/plus.png" alt="">
+      <span>Adicionar contato</span>
+    </button>
+  </section>
+
   @for (letra of alfabeto; track letra) {
     <app-separador>
       {{ letra }}

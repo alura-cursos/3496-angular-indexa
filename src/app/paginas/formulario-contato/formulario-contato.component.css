@@ -18,6 +18,13 @@ header .cabecalho-link img.seta {
   margin: 0 8px;
 }
 
+header .cabecalho-link button {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
 header .cabecalho-link a {
   text-decoration: none;
   font-family: 'Montserrat';
