@@ -1,20 +1,3 @@
 <app-formulario-contato></app-formulario-contato>
+<app-lista-contatos></app-lista-contatos>
 
-<app-container>
-  <app-cabecalho></app-cabecalho>
-
-  <input
-    type="search"
-    placeholder="Digite para buscar"
-    [(ngModel)]="filtroPorTexto"
-  />
-
-  @for (letra of alfabeto; track letra) {
-    <app-separador>
-      {{ letra }}
-    </app-separador>
-    @for (contato of filtrarContatosPorLetraInicial(letra); track contato.id) {
-      <app-contato [nome]="contato.nome" [telefone]="contato.telefone" ></app-contato>
-    }
-  }
-</app-container>
