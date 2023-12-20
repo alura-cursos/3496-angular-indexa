@@ -35,4 +35,9 @@ export class ContatoService {
   obterContatos() {
     return this.contatos;
   }
+
+  salvarContato(contato: Contato) {
+    this.contatos.push(contato);
+    localStorage.setItem('contatos', JSON.stringify(this.contatos));
+  }
 }
