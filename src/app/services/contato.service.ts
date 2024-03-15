@@ -25,8 +25,10 @@ export class ContatoService {
     const contatosLocalStorageString = localStorage.getItem('contatos');
     const contatosLocalStorage =
       contatosLocalStorageString ? JSON.parse(contatosLocalStorageString) : null;
-
-    this.contatos = contatosLocalStorage || null;
+    //A condição abaixo previne que na primeira execução da app em um novo navegador o localStorage não seja carregado.
+    if (contatosLocalStorage !== null) {
+      this.contatos = contatosLocalStorage || null;
+    }
 
     //Salvar os contatos no localStorage
     localStorage.setItem('contatos', JSON.stringify(this.contatos));
